@@ -1,0 +1,40 @@
+
+   lazy.nvim (H)   Install (I)   Update (U)   Sync (S)   Clean (X)   Check (C)   Log (L)   Restore (R)   Profile (P)   Debug (D)   Help (?) 
+
+  Total: 32 plugins
+
+  Loaded (14)
+    ● alpha-nvim 0.31ms  start
+    ● bufferline.nvim 2.46ms  VeryLazy
+    ● comment.nvim 0.85ms  BufReadPre
+    ● gitsigns.nvim 0.62ms  BufReadPre
+    ● indent-blankline.nvim 2.08ms  start
+    ● lazy.nvim 3.23ms  init.lua
+    ● lualine.nvim 6.89ms  VeryLazy
+    ● moonbow 2.6ms  start
+    ● nvim-colorizer.lua 1ms  start
+    ● nvim-surround 0.64ms  VeryLazy
+    ● nvim-treesitter 5.9ms  BufReadPost
+    ● nvim-treesitter-textobjects 0.13ms  nvim-treesitter
+    ● nvim-web-devicons 1.56ms 󰢱 nvim-web-devicons  lualine.nvim
+    ● which-key.nvim 9.98ms  VeryLazy
+
+  Not Loaded (18)
+    ○ cmp-buffer  nvim-cmp 
+    ○ cmp-cmdline  nvim-cmp 
+    ○ cmp-path  nvim-cmp 
+    ○ cmp_luasnip  nvim-cmp 
+    ○ friendly-snippets  nvim-cmp 
+    ○ lazygit.nvim  <leader>gg  LazyGit  LazyGitConfig 
+    ○ lspkind.nvim  nvim-cmp 
+    ○ LuaSnip  nvim-cmp 
+    ○ markdown-preview.nvim  MarkdownPreviewToggle  MarkdownPreview  MarkdownPreviewStop  markdown 
+    ○ mason.nvim  <leader>cm  Mason  none-ls.nvim 
+    ○ none-ls.nvim 
+    ○ nvim-autopairs  InsertEnter 
+    ○ nvim-cmp  InsertEnter 
+    ○ nvim-navic 
+    ○ plenary.nvim  telescope.nvim 
+    ○ telescope.nvim  Telescope 
+    ○ toggleterm.nvim  <C-\> (t)  <C-\> 
+    ○ trouble.nvim  <leader>xX  <leader>xL  <leader>xQ  [q  ]q  <leader>xx  Trouble  TroubleToggle 
