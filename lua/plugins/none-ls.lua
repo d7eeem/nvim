@@ -11,15 +11,18 @@ return {
 			null_ls.builtins.code_actions.eslint,
 			null_ls.builtins.code_actions.refactoring,
 			null_ls.builtins.code_actions.shellcheck,
+			null_ls.builtins.code_actions.stylelint,
 			null_ls.builtins.completion.luasnip,
 			null_ls.builtins.diagnostics.actionlint,
 			null_ls.builtins.diagnostics.dotenv_linter,
 			null_ls.builtins.diagnostics.eslint,
 			null_ls.builtins.diagnostics.luacheck,
 			null_ls.builtins.diagnostics.markdownlint,
+			null_ls.builtins.diagnostics.stylelint,
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.shfmt,
 			null_ls.builtins.formatting.beautysh,
+			null_ls.builtins.formatting.stylelint,
 		})
 	end,
 }
