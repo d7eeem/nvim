@@ -11,7 +11,6 @@ return {
 			null_ls.builtins.code_actions.eslint,
 			null_ls.builtins.code_actions.refactoring,
 			null_ls.builtins.code_actions.shellcheck,
-			null_ls.builtins.code_actions.stylelint,
 			null_ls.builtins.completion.luasnip,
 			null_ls.builtins.diagnostics.actionlint,
 			null_ls.builtins.diagnostics.dotenv_linter,
@@ -26,3 +25,6 @@ return {
 		})
 	end,
 }
+
+-- null_ls.builtins.code_actions.stylelint,
+
