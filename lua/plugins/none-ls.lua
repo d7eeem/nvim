@@ -18,10 +18,13 @@ return {
 			null_ls.builtins.diagnostics.luacheck,
 			null_ls.builtins.diagnostics.markdownlint,
 			null_ls.builtins.diagnostics.stylelint,
+			null_ls.builtins.diagnostics.jsonlint,
 			null_ls.builtins.formatting.stylua,
 			null_ls.builtins.formatting.shfmt,
 			null_ls.builtins.formatting.beautysh,
 			null_ls.builtins.formatting.stylelint,
+      null_ls.builtins.formatting.fixjson,
+      null_ls.builtins.formatting.prettier,
 		})
 	end,
 }

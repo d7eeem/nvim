@@ -18,9 +18,9 @@ return {
 				"prettier",
 				"stylua",
 				"yaml-language-server",
-        "lemminx",
-        "shfmt",
-        "beautysh",
+				"lemminx",
+				"shfmt",
+				"beautysh",
 			},
 			registries = {
 				"github:mason-org/mason-registry",
@@ -44,8 +44,7 @@ return {
 			end
 		end,
 	},
-},
-{
+}, {
 	"neovim/nvim-lspconfig",
 	opts = {
 		inlay_hints = { enabled = true },
@@ -173,14 +172,12 @@ return {
 		},
 		setup = {},
 	},
-},
-{
+}, {
 	"neovim/nvim-lspconfig",
 	opts = {
 		diagnostics = { virtual_text = { prefix = "icons" } },
 	},
-}
---[[ {
+}, {
 	"stevearc/conform.nvim",
 	optional = true,
 	opts = {
@@ -191,7 +188,7 @@ return {
 			["javascriptreact"] = { "dprint" },
 			["typescript"] = { "dprint" },
 			["typescriptreact"] = { "dprint" },
-      ["bash"] = {"beautysh", "shfmt"}
+			["bash"] = { "beautysh", "shfmt" },
 		},
 		formatters = {
 			shfmt = {
@@ -204,8 +201,7 @@ return {
 			},
 		},
 	},
-},
-{
+}, {
 	"mfussenegger/nvim-lint",
 	opts = {
 		linters_by_ft = {
@@ -225,4 +221,4 @@ return {
 			},
 		},
 	},
-} ]]
+}
