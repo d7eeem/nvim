@@ -10,20 +10,20 @@ return {
         local telescope = require("telescope")
         local actions = require("telescope.actions")
 
-        -- Get current theme colours
-        local get_hlgroup = require("core.utils").get_hlgroup
-        local normal = get_hlgroup("Normal")
-        local fg, bg = normal.fg, normal.bg
-        local bg_alt = get_hlgroup("Visual").bg
-        local green = get_hlgroup("String").fg
-        local red = get_hlgroup("Error").fg
-
-        -- Set solid background if transparency is enabled
-        if bg == "NONE" then
-            bg = "#1e222a"
-            bg_alt = "#2a2e36"
-        end
-
+        -- -- Get current theme colours
+        -- local get_hlgroup = require("telescope.utils").get_hlgroup
+        -- local normal = get_hlgroup("Normal")
+        -- local fg, bg = normal.fg, normal.bg
+        -- local bg_alt = get_hlgroup("Visual").bg
+        -- local green = get_hlgroup("String").fg
+        -- local red = get_hlgroup("Error").fg
+        --
+        -- -- Set solid background if transparency is enabled
+        -- if bg == "NONE" then
+        --     bg = "#1e222a"
+        --     bg_alt = "#2a2e36"
+        -- end
+        --
         telescope.setup({
             pickers = {
                 colorscheme = {
@@ -53,7 +53,7 @@ return {
             layout_strategy = "horizontal",
             layout_config = {
                 horizontal = {
-                    prompt_position = "top",
+                    prompt_position = "bottom",
                     preview_width = 0.55,
                     results_width = 0.8
                 },
