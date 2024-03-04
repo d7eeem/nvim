@@ -21,6 +21,3 @@ return {
 		})
 	end,
 }
-
--- null_ls.builtins.code_actions.stylelint,
-
