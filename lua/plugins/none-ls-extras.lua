@@ -11,4 +11,3 @@ return {
   require("none-ls.formatting.yq")
   end
 }
-  
