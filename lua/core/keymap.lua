@@ -31,10 +31,6 @@ map("n", "<C-l>", "<C-w>l", opt)
 -- best remap ever globle sed replace
 map("n", "S", ":%s//g<Left><Left>", opt) -- this remap do sed replace function
 
--- Commenter Keybinding
-map("n", "<leader>/", ":CommentToggle<CR>", opt)
-map("v", "<leader>/", ":CommentToggle<CR>", opt)
-
 -- bufferline tab stuff
 map("n", "T", ":tabnew<CR>", opt) -- new tab
 map("n", "X", ":bd!<CR>", opt) -- close tab
