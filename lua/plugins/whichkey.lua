@@ -35,7 +35,7 @@ return {
         { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>",   desc = "Stage Hunk" },
         { "<leader>gu",
           "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-          "Undo Stage Hunk",
+          desc = "Undo Stage Hunk",
         },
         { "<leader>go", "<cmd>Telescope git_status<cr>",                    desc = "Open changed file" },
         { "<leader>gb", "<cmd>Telescope git_branches<cr>",                  desc = "Checkout branch" },
