@@ -12,10 +12,10 @@ return {
       {
         mode = { "n", "v" },
         { "<leader>x",  group = "diagnostics/quickfix" },
-        { "<leader>f",  group = "file" },        -- group
+        { "<leader>f",  group = "file" }, -- group
         { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
         { "<leader>fn", desc = "New File" },
-        { "<leader>f1", hidden = true },                             -- hide this keymap
+        { "<leader>f1", hidden = true },                                      -- hide this keymap
         { "<leader>w",  proxy = "<c-w>",                 group = "windows" }, -- proxy to window mappings
         {
           "<leader>b",
@@ -33,7 +33,8 @@ return {
         { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>",   desc = "Reset Hunk" },
         { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer" },
         { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>",   desc = "Stage Hunk" },
-        { "<leader>gu",
+        {
+          "<leader>gu",
           "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
           desc = "Undo Stage Hunk",
         },
@@ -55,15 +56,15 @@ return {
         { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>",                desc = "Rename" },
         { "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>",          desc = "Document Symbols" },
         { "<leader>lS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Workspace Symbols", },
-        { "<leader>s", group = "Telescope_Search" },
-        { "<leader>sb", "<cmd>Telescope git_branches<cr>", desc = "Checkout branch" },
-        { "<leader>sc", "<cmd>Telescope colorscheme<cr>",  desc = "Colorscheme" },
-        { "<leader>sh", "<cmd>Telescope help_tags<cr>",    desc = "Find Help" },
-        { "<leader>sM", "<cmd>Telescope man_pages<cr>",    desc = "Man Pages" },
-        { "<leader>sr", "<cmd>Telescope oldfiles<cr>",     desc = "Open Recent File" },
-        { "<leader>sR", "<cmd>Telescope registers<cr>",    desc = "Registers" },
-        { "<leader>sk", "<cmd>Telescope keymaps<cr>",      desc = "Keymaps" },
-        { "<leader>sC", "<cmd>Telescope commands<cr>",     desc = "Commands" },
+        { "<leader>s",  group = "Telescope_Search" },
+        { "<leader>sb", "<cmd>Telescope git_branches<cr>",                  desc = "Checkout branch" },
+        { "<leader>sc", "<cmd>Telescope colorscheme<cr>",                   desc = "Colorscheme" },
+        { "<leader>sh", "<cmd>Telescope help_tags<cr>",                     desc = "Find Help" },
+        { "<leader>sM", "<cmd>Telescope man_pages<cr>",                     desc = "Man Pages" },
+        { "<leader>sr", "<cmd>Telescope oldfiles<cr>",                      desc = "Open Recent File" },
+        { "<leader>sR", "<cmd>Telescope registers<cr>",                     desc = "Registers" },
+        { "<leader>sk", "<cmd>Telescope keymaps<cr>",                       desc = "Keymaps" },
+        { "<leader>sC", "<cmd>Telescope commands<cr>",                      desc = "Commands" },
       } })
   end,
 }
