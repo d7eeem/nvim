@@ -4,8 +4,7 @@ return {
   opts = function()
     require('lualine').setup {
       options = {
-        theme = 'pywal16-nvim',
-        -- theme = 'moonbow',
+        theme = 'moonbow',
       }
     }
   end,

@@ -16,15 +16,15 @@ if is_transparent then
     eob = " ",
   })
 end
-return {
-  'uZer/pywal16.nvim',
-  name = "pywal16",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("pywal16").setup()
-  end,
-}
+-- return {
+--   'uZer/pywal16.nvim',
+--   name = "pywal16",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("pywal16").setup()
+--   end,
+-- }
 -- return {
 --   'uZer/pywal16.nvim',
 --   name = "pywal16",
@@ -34,14 +34,14 @@ return {
 --     vim.cmd("pywal16")
 --   end,
 -- }
--- return {
---   {
---     "arturgoms/moonbow.nvim",
---     name = "moonbow",
---     lazy = false,
---     priority = 1000,
---     config = function()
---       vim.cmd("colorscheme moonbow")
---     end,
---   },
--- }
+return {
+  {
+    "arturgoms/moonbow.nvim",
+    name = "moonbow",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme moonbow")
+    end,
+  },
+}
