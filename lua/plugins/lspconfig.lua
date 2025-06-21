@@ -11,11 +11,11 @@ return {
     local capabilities = cmp_nvim_lsp.default_capabilities()
     vim.diagnostic.config({
       virtual_text = {
-        spacing = 4,
+        spacing = 10,
         prefix = "●",
       },
       signs = true,
-      underline = true,
+      underline = false,
       update_in_insert = false,
       severity_sort = true,
     })
