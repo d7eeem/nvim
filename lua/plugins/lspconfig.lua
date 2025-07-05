@@ -29,7 +29,7 @@ return {
     -- Setup language servers
     local servers = {
       html = {},
-      tsserver = {},
+      ts_ls = {},
       cssls = {},
       tailwindcss = {},
       graphql = {
