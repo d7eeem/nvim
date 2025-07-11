@@ -4,7 +4,7 @@ return {
   opts = function()
     require('lualine').setup {
       options = {
-        theme = 'moonbow',
+        theme = 'everforest',
       }
     }
   end,

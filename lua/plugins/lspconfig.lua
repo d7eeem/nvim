@@ -19,6 +19,7 @@ return {
       update_in_insert = false,
       severity_sort = true,
     })
+
     -- Diagnostic signs (gutter icons)
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do
@@ -30,7 +31,9 @@ return {
     local servers = {
       html = {},
       ts_ls = {},
-      cssls = {},
+      cssls = {
+        filetypes = { "css", "scss", "rasi" }
+      },
       tailwindcss = {},
       graphql = {
         filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
@@ -40,8 +43,20 @@ return {
           "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte",
         },
       },
+      jsonls = {
+        filetypes = { "json", "jsonc" },
+        settings = {
+          json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      },
       pyright = {},
-      bashls = {},
+      taplo = { "toml" },
+      bashls = {
+        filetypes = { "bash", "sh" }
+      },
       lua_ls = {
         settings = {
           Lua = {

@@ -49,8 +49,8 @@ return {
         { "<leader>lf", "<cmd>lua vim.lsp.buf.format{async=true}<cr>",      desc = "Format" },
         { "<leader>li", "<cmd>LspInfo<cr>",                                 desc = "Info" },
         { "<leader>lI", "<cmd>LspInstallInfo<cr>",                          desc = "Installer Info" },
-        { "<leader>lj", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",      desc = "Next Diagnostic", },
-        { "<leader>lk", "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",      desc = "Prev Diagnostic", },
+        { "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>",      desc = "Next Diagnostic", },
+        { "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<cr>",      desc = "Prev Diagnostic", },
         { "<leader>ll", "<cmd>lua vim.lsp.codelens.run()<cr>",              desc = "CodeLens Action" },
         { "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<cr>",         desc = "Quickfix" },
         { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>",                desc = "Rename" },
@@ -68,19 +68,3 @@ return {
       } })
   end,
 }
---[[ return {
-      n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-      u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-      t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-      p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-      f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-      h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-      v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-    }
-}},
-config = function(_, opts)
-    local wk = require("which-key")
-    wk.setup(setup)
-    wk.register(opts.defaults)
-end,
-} ]]

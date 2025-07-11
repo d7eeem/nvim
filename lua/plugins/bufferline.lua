@@ -7,9 +7,9 @@ return {
   },
   opts = {
     options = {
-      numbers = "none",                -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-      close_command = "bd! %d",        -- Fixed: use built-in buffer delete
-      right_mouse_command = "bd! %d",  -- Fixed: use built-in buffer delete
+      numbers = "none",               -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+      close_command = "bd! %d",       -- Fixed: use built-in buffer delete
+      right_mouse_command = "bd! %d", -- Fixed: use built-in buffer delete
       left_mouse_command = "buffer %d",
       middle_mouse_command = nil,
       indicator_icon = nil,
@@ -22,7 +22,7 @@ return {
       max_name_length = 30,
       max_prefix_length = 30,
       tab_size = 21,
-      diagnostics = "nvim_lsp",        -- or "coc"
+      diagnostics = "nvim_lsp", -- or "coc"
       diagnostics_update_in_insert = false,
       offsets = {
         { filetype = "NvimTree", text = "", padding = 1 },
@@ -32,7 +32,7 @@ return {
       show_close_icon = true,
       show_tab_indicators = true,
       persist_buffer_sort = true,
-      separator_style = "thin",        -- "thick" | "thin" | { 'any', 'any' }
+      separator_style = "thin", -- "thick" | "thin" | { 'any', 'any' }
       enforce_regular_tabs = true,
       always_show_bufferline = true,
       diagnostics_indicator = function(count, level)
