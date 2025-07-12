@@ -9,27 +9,11 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-
-    -- -- Get current theme colours
-    -- local get_hlgroup = require("telescope.utils").get_hlgroup
-    -- local normal = get_hlgroup("Normal")
-    -- local fg, bg = normal.fg, normal.bg
-    -- local bg_alt = get_hlgroup("Visual").bg
-    -- local green = get_hlgroup("String").fg
-    -- local red = get_hlgroup("Error").fg
-    --
-    -- -- Set solid background if transparency is enabled
-    -- if bg == "NONE" then
-    --     bg = "#1e222a"
-    --     bg_alt = "#2a2e36"
-    -- end
-    --
     telescope.setup({
       pickers = {
         colorscheme = {
           enable_preview = true,
         },
-
         find_files = {
           hidden = true,
         },
@@ -73,7 +57,7 @@ return {
         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
         color_devicons = true,
         use_less = true,
-        set_env = { ["COLORTERM"] = "truecolor" },   -- default = nil,
+        set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
         file_previewer = require "telescope.previewers".vim_buffer_cat.new,
         grep_previewer = require "telescope.previewers".vim_buffer_vimgrep.new,
         qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,
@@ -83,8 +67,8 @@ return {
       path_display = { "truncate " },
       mappings = {
         i = {
-          ["<C-k>"] = actions.move_selection_previous,               -- move to prev result
-          ["<C-j>"] = actions.move_selection_next,                   -- move to next result
+          ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+          ["<C-j>"] = actions.move_selection_next,     -- move to next result
           ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         },
       },

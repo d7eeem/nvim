@@ -2,8 +2,8 @@ return {
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      markdown = { { "prettierd", "prettier" } },
-      ["markdown.mdx"] = { { "prettierd", "prettier" } },
+      markdown = { "prettierd", "prettier" },
+      ["markdown.mdx"] = { "prettierd", "prettier" },
       javascript = { "dprint" },
       javascriptreact = { "dprint" },
       typescript = { "dprint" },
