@@ -16,8 +16,8 @@ return {
     local lspkind = require("lspkind")
     local max_items = 5
     local check_backspace = function()
-      local col = vim.fn.col "." - 1
-      return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+      local col = vim.fn.col(".") - 1
+      return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
     end
 
     require("luasnip.loaders.from_vscode").lazy_load()
@@ -44,7 +44,7 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm { select = true },
+        ["<CR>"] = cmp.mapping.confirm({select = true}),
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
@@ -75,10 +75,10 @@ return {
         }),
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp", max_item_count = max_items },
-        { name = "luasnip",  max_item_count = max_items },
-        { name = "buffer",   max_item_count = max_items },
-        { name = "path",     max_item_count = max_items },
+        {name = "nvim_lsp", max_item_count = max_items},
+        {name = "luasnip", max_item_count = max_items},
+        {name = "buffer", max_item_count = max_items},
+        {name = "path", max_item_count = max_items},
       }),
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
@@ -89,40 +89,40 @@ return {
       },
     })
 
-    cmp.setup.cmdline({ "/", "?" }, {
+    cmp.setup.cmdline({"/", "?"}, {
       mapping = cmp.mapping.preset.cmdline(),
       sources = {
-        { name = "buffer", max_item_count = max_items },
+        {name = "buffer", max_item_count = max_items},
       },
     })
 
     cmp.setup.cmdline(":", {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
-        { name = "path", max_item_count = max_items },
+        {name = "path", max_item_count = max_items},
       }, {
-        { name = "cmdline", max_item_count = max_items },
+        {name = "cmdline", max_item_count = max_items},
       }),
     })
 
     -- set highlights for completion types
-    vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { bg = "NONE", strikethrough = true, fg = "#808080" })
-    vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { bg = "NONE", fg = "#569CD6" })
-    vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { link = "CmpItemAbbrMatch" })
-    vim.api.nvim_set_hl(0, "CmpItemKindVariable", { bg = "NONE", fg = "#9CDCFE" })
-    vim.api.nvim_set_hl(0, "CmpItemKindInterface", { link = "CmpItemKindVariable" })
-    vim.api.nvim_set_hl(0, "CmpItemKindText", { link = "CmpItemKindVariable" })
-    vim.api.nvim_set_hl(0, "CmpItemKindFunction", { bg = "NONE", fg = "#C586C0" })
-    vim.api.nvim_set_hl(0, "CmpItemKindMethod", { link = "CmpItemKindFunction" })
-    vim.api.nvim_set_hl(0, "CmpItemKindKeyword", { bg = "NONE", fg = "#D4D4D4" })
-    vim.api.nvim_set_hl(0, "CmpItemKindProperty", { link = "CmpItemKindKeyword" })
-    vim.api.nvim_set_hl(0, "CmpItemKindUnit", { link = "CmpItemKindKeyword" })
+    vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", {bg = "NONE", strikethrough = true, fg = "#808080"})
+    vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", {bg = "NONE", fg = "#569CD6"})
+    vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", {link = "CmpItemAbbrMatch"})
+    vim.api.nvim_set_hl(0, "CmpItemKindVariable", {bg = "NONE", fg = "#9CDCFE"})
+    vim.api.nvim_set_hl(0, "CmpItemKindInterface", {link = "CmpItemKindVariable"})
+    vim.api.nvim_set_hl(0, "CmpItemKindText", {link = "CmpItemKindVariable"})
+    vim.api.nvim_set_hl(0, "CmpItemKindFunction", {bg = "NONE", fg = "#C586C0"})
+    vim.api.nvim_set_hl(0, "CmpItemKindMethod", {link = "CmpItemKindFunction"})
+    vim.api.nvim_set_hl(0, "CmpItemKindKeyword", {bg = "NONE", fg = "#D4D4D4"})
+    vim.api.nvim_set_hl(0, "CmpItemKindProperty", {link = "CmpItemKindKeyword"})
+    vim.api.nvim_set_hl(0, "CmpItemKindUnit", {link = "CmpItemKindKeyword"})
 
     -- nvim-cmp support for markdown buffers
-    cmp.setup.filetype('markdown', {
+    cmp.setup.filetype("markdown", {
       sources = {
-        { name = 'buffer' },
-        { name = 'path' },
+        {name = "buffer"},
+        {name = "path"},
       },
     })
   end,

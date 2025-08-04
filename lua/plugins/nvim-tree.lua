@@ -12,31 +12,31 @@ return {
       {
         "<leader>n",
         function()
-          require("neo-tree.command").execute({ toggle = true, dir = vim.fn.getcwd() })
+          require("neo-tree.command").execute({toggle = true, dir = vim.fn.getcwd()})
         end,
         desc = "Explorer NeoTree",
       },
       {
         "<leader>ge",
         function()
-          require("neo-tree.command").execute({ source = "git_status", toggle = true })
+          require("neo-tree.command").execute({source = "git_status", toggle = true})
         end,
         desc = "Git Explorer",
       },
       {
         "<leader>be",
         function()
-          require("neo-tree.command").execute({ source = "buffers", toggle = true })
+          require("neo-tree.command").execute({source = "buffers", toggle = true})
         end,
         desc = "Buffer Explorer",
       },
     },
     opts = {
-      sources = { "filesystem", "buffers", "git_status" },
-      open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
+      sources = {"filesystem", "buffers", "git_status"},
+      open_files_do_not_replace_types = {"terminal", "Trouble", "trouble", "qf", "Outline"},
       filesystem = {
         bind_to_cwd = false,
-        follow_current_file = { enabled = true },
+        follow_current_file = {enabled = true},
         use_libuv_file_watcher = true,
         filtered_items = {
           visible = false,
@@ -72,7 +72,7 @@ return {
             end,
             desc = "Open with System Application",
           },
-          ["p"] = { "toggle_preview", config = { use_float = false } },
+          ["p"] = {"toggle_preview", config = {use_float = false}},
           ["<2-LeftMouse>"] = "open",
           ["<cr>"] = "open",
           ["<esc>"] = "cancel",
@@ -83,10 +83,10 @@ return {
             -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
             -- some commands may take optional config options, see `:h neo-tree-mappings` for details
             config = {
-              show_path = "none", -- "none", "relative", "absolute"
+              show_path = "none",               -- "none", "relative", "absolute"
             },
           },
-          ["A"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
+          ["A"] = "add_directory",           -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
           ["d"] = "delete",
           ["r"] = "rename",
           ["b"] = "rename_basename",
@@ -94,7 +94,7 @@ return {
           ["x"] = "cut_to_clipboard",
           ["P"] = "paste_from_clipboard",
           ["c"] = "copy",
-          ["m"] = "move",             -- takes text input for destination, also accepts the optional config.show_path option like "add".
+          ["m"] = "move",           -- takes text input for destination, also accepts the optional config.show_path option like "add".
           ["q"] = "close_window",
           ["R"] = "refresh",
           ["?"] = "show_help",
@@ -102,7 +102,6 @@ return {
           [">"] = "next_source",
           ["i"] = "show_file_details",
         },
-
       },
       default_component_configs = {
         indent = {

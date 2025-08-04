@@ -26,7 +26,7 @@ return {
           "--with-filename",
           "--line-number",
           "--column",
-          "--smart-case"
+          "--smart-case",
         },
         prompt_prefix = "   ",
         selection_caret = "  ",
@@ -39,40 +39,40 @@ return {
           horizontal = {
             prompt_position = "bottom",
             preview_width = 0.55,
-            results_width = 0.8
+            results_width = 0.8,
           },
           vertical = {
-            mirror = false
+            mirror = false,
           },
           width = 0.87,
           height = 0.80,
-          preview_cutoff = 120
+          preview_cutoff = 120,
         },
-        file_sorter = require "telescope.sorters".get_fuzzy_file,
+        file_sorter = require("telescope.sorters").get_fuzzy_file,
         file_ignore_patterns = {},
-        generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
+        generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
         shorten_path = true,
         winblend = 0,
         border = {},
-        borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+        borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
         color_devicons = true,
         use_less = true,
-        set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
-        file_previewer = require "telescope.previewers".vim_buffer_cat.new,
-        grep_previewer = require "telescope.previewers".vim_buffer_vimgrep.new,
-        qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,
+        set_env = {["COLORTERM"] = "truecolor"},           -- default = nil,
+        file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+        qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
         -- Developer configurations: Not meant for general override
-        buffer_previewer_maker = require "telescope.previewers".buffer_previewer_maker
+        buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
       },
-      path_display = { "truncate " },
+      path_display = {"truncate "},
       mappings = {
         i = {
-          ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-          ["<C-j>"] = actions.move_selection_next,     -- move to next result
+          ["<C-k>"] = actions.move_selection_previous,           -- move to prev result
+          ["<C-j>"] = actions.move_selection_next,               -- move to next result
           ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         },
       },
-      file_ignore_patterns = { ".git%p" }
+      file_ignore_patterns = {".git%p"},
     })
   end,
 }
