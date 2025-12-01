@@ -6,15 +6,15 @@ return {
     {"antosha417/nvim-lsp-file-operations", config = true},
   },
   config = function()
-    local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local capabilities = cmp_nvim_lsp.default_capabilities()
+    
     -- Store the original virtual text config for toggling
     local original_virtual_text = {
       spacing = 10,
       prefix = "●",
     }
-
+    
     vim.diagnostic.config({
       virtual_text = original_virtual_text,
       signs = true,
@@ -22,7 +22,7 @@ return {
       update_in_insert = false,
       severity_sort = true,
     })
-
+    
     -- Toggle virtual text function
     local function toggle_virtual_text()
       local current_config = vim.diagnostic.config()
@@ -34,18 +34,18 @@ return {
         print("Virtual text enabled")
       end
     end
-
+    
     -- Set up the keymap for toggling virtual text
     vim.keymap.set("n", "<leader>lv", toggle_virtual_text, {desc = "Toggle virtual text"})
-
+    
     -- Diagnostic signs (gutter icons)
-    local signs = {Error = " ", Warn = " ", Hint = "󰠠 ", Info = " "}
+    local signs = {Error = " ", Warn = " ", Hint = "󰠠 ", Info = " "}
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
     end
-
-    -- Setup language servers
+    
+    -- Setup language servers using new vim.lsp.config API
     local servers = {
       html = {},
       ts_ls = {},
@@ -92,7 +92,9 @@ return {
         },
       },
       pyright = {},
-      taplo = {"toml"},
+      taplo = {
+        filetypes = {"toml"},
+      },
       bashls = {
         filetypes = {"bash", "sh"},
       },
@@ -110,10 +112,17 @@ return {
         },
       },
     }
-
+    
+    -- Configure and enable each server
     for server, config in pairs(servers) do
+      -- Merge capabilities into the config
       config.capabilities = capabilities
-      lspconfig[server].setup(config)
+      
+      -- Set the configuration for the server
+      vim.lsp.config[server] = config
+      
+      -- Enable the LSP server
+      vim.lsp.enable(server)
     end
   end,
 }

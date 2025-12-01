@@ -36,6 +36,7 @@ return {
       "toml",
       "yaml",
       "jsonc",
+      "fish",
     },
     incremental_selection = {
       enable = true,

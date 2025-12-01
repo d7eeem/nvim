@@ -25,6 +25,7 @@ return {
         "luacheck",
         "markdownlint",
         "stylelint",
+        "fish-lsp",
       },
       registries = {
         "github:mason-org/mason-registry",

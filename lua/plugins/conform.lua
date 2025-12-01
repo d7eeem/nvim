@@ -15,6 +15,7 @@ return {
       yaml = {"yamlfmt"},
       rasi = {"css-lsp"},
       toml = {"taplo"},
+      fish = {"fish-lsp"},
     },
     formatters = {
       prettier = {
